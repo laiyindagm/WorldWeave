@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WorldWeave: Growing Persistent Geometric Worlds for Video Generation</title>
+  <meta name="description" content="WorldWeave grows persistent geometric worlds through continual terrain completion, agent-guided scene construction, and read-only depth-guided video generation.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23143643'/%3E%3Cpath d='M5 9l5 14 6-12 6 12 5-14' fill='none' stroke='%23fff' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#abstract">Skip to content</a>
+  <header class="hero">
+    <h1><span class="wordmark">WorldWeave</span><span class="subtitle">Growing Persistent Geometric Worlds<br class="desktop-break"> for Video Generation</span></h1>
+    <div class="authors"><span><a href="https://openreview.net/profile?id=~Huang_Yifan1">Yifan Huang</a><sup>1</sup></span>
+<span><a href="https://openreview.net/profile?id=~Lifan_Jiang1">Lifan Jiang</a><sup>1</sup></span>
+<span><a href="https://openreview.net/profile?id=~Qingyue_Hao1">Qingyue Hao</a><sup>1</sup></span>
+<span><a href="https://openreview.net/profile?id=~Cheng_Chen78">Cheng Chen</a><sup>1</sup></span>
+<span><a href="https://openreview.net/profile?id=~Boxi_Wu1">Boxi Wu</a><sup>2</sup></span>
+<span><a href="https://openreview.net/profile?id=~Xiaoxue_Ren1">Xiaoxue Ren</a><sup>1</sup></span>
+<span><a href="https://openreview.net/profile?id=~Xiaofei_He2">Xiaofei He</a><sup>1</sup></span>
+<span><a href="https://openreview.net/profile?id=~Dehai_Zhao2">Dehai Zhao</a><sup>1,†</sup></span></div>
+    <p class="affiliations"><span><sup>1</sup> Zhejiang University</span><span><sup>2</sup> Daerwen AI</span></p>
+    <p class="corresponding">† Corresponding author</p>
+    <nav class="resources" aria-label="Project resources">
+      <a class="button primary" href="assets/worldweave.pdf">Read the paper <span aria-hidden="true">↗</span></a>
+      
+      <a class="button" href="https://github.com/laiyindagm/WorldWeave">Code <small>coming soon</small></a>
+      <a class="button" href="#video">Video</a>
+    </nav>
+  </header>
+  <main>
+    <figure class="teaser wide">
+      <a href="assets/worldweave_overview.pdf" aria-label="Open the full-resolution WorldWeave overview PDF"><img src="assets/worldweave_overview.svg" alt="WorldWeave overview: terrain completion, hierarchical agent planning, and read-only rendering progressively extend a persistent geometric world." fetchpriority="high"></a>
+      <figcaption>Grow the world. Preserve its structure. Render new observations.</figcaption>
+    </figure>
+    <section id="abstract" class="reading">
+      <h2>Abstract</h2>
+      <p>Despite rapid progress, world models still lack explicit, persistent structural memory, making it difficult to preserve consistent world structure during continual scene expansion and cross-view revisits. To address this limitation, we present WorldWeave, a world generation framework that decouples world-state maintenance from visual rendering. Specifically, WorldWeave combines continual elevation-map generation with agent-guided scene organization and stitching to build an expandable explicit 3D world that incrementally extends structural memory while preserving existing structure. First, its terrain module uses diffusion-based image outpainting to generate continuous metric elevation maps under neighborhood conditioning and boundary constraints. Next, an agent integrates user intent, terrain evidence, and cross-region connectivity constraints to construct scenes through hierarchical semantic planning, deterministic geometry compilation, and local revision. Finally, during visual generation, planned camera trajectories query world geometry through a read-only interface, producing depth sequences that guide video synthesis without writing the generated results back into the world state. As a result, structural memory remains independent of short-window video generation, enabling continual expansion without predefined map boundaries and providing a consistent geometric basis for observations across trajectories and repeated visits.</p>
+    </section>
+    <section id="video" class="reading">
+      <h2>Video demonstration</h2>
+      <div class="video-slot" role="img" aria-label="Video demonstration coming soon">
+        <span class="video-label">WorldWeave</span>
+        <p>Video demonstration</p><span class="coming">Coming soon</span>
+      </div>
+    </section>
+    <section class="wide examples">
+      <div class="section-heading"><h2>Explore. Turn away. Revisit.</h2><p>Shared geometry across changing observations.</p></div>
+      <figure><a href="assets/demo_main.pdf"><img src="assets/demo_main.svg" alt="Four video sequences show farmstead, river crossing, town and winter scenes remaining coherent during camera motion and revisitation." loading="lazy"></a>
+        <figcaption>Each row follows a viewing trajectory from left to right. Insets show depth guidance; numbered markers identify the same scene elements across views.</figcaption>
+      </figure>
+    </section>
+    <section class="wide method">
+      <div class="section-heading"><h2>From persistent world to video</h2><p>Terrain completion · Agent planning · Read-only rendering</p></div>
+      <figure><a href="assets/pipeline.pdf"><img src="assets/pipeline.svg" alt="The WorldWeave pipeline connects metric terrain generation, hierarchical scene planning and validation, and depth-guided video synthesis." loading="lazy"></a></figure>
+    </section>
+    <section class="results wide" id="results">
+      <div class="section-heading"><h2>Quantitative results</h2><p>Visual quality, memory, camera control and structural consistency.</p></div>
+      <div class="table-scroll" role="region" aria-label="Quantitative results; scroll horizontally on small screens" tabindex="0"><table><caption>Main quantitative results</caption><thead><tr><th rowspan="2" scope="col">Method</th><th colspan="2" scope="colgroup">Visual quality</th><th colspan="2" scope="colgroup">Memory &amp; camera control</th><th colspan="4" scope="colgroup">Structural consistency</th></tr><tr><th scope="col">Imaging<br>quality ↑</th><th scope="col">Aesthetic<br>quality ↑</th><th scope="col">Structural<br>memory ↑</th><th scope="col">Camera<br>compliance ↑</th><th scope="col">MN-MS ↑</th><th scope="col">MC-GeCo ↓</th><th scope="col">MC-MEt3R ↓</th><th scope="col">MC-GeoCon ↓</th></tr></thead><tbody><tr class=""><th scope="row">SANA-WM</th><td><span class="">0.739</span></td><td><span class="">0.619</span></td><td><span class="">0.328</span></td><td><span class="">55.5</span></td><td><span class="">0.973</span></td><td><span class="">0.113</span></td><td><span class="">0.203</span></td><td><span class="">0.189</span></td></tr><tr class=""><th scope="row">Zing</th><td><span class="">0.763</span></td><td><span class="">0.685</span></td><td><span class="">0.989</span></td><td><span class="">55.8</span></td><td><span class="">0.974</span></td><td><span class="">0.0698</span></td><td><span class="second">0.129</span></td><td><span class="">0.142</span></td></tr><tr class=""><th scope="row">SolarWM-5B</th><td><span class="">0.755</span></td><td><span class="">0.604</span></td><td><span class="">0.370</span></td><td><span class="">54.7</span></td><td><span class="">0.956</span></td><td><span class="">0.0786</span></td><td><span class="">0.166</span></td><td><span class="">0.217</span></td></tr><tr class=""><th scope="row">AlayaWorld</th><td><span class="">0.784</span></td><td><span class="">0.641</span></td><td><span class="">1.51</span></td><td><span class="">56.4</span></td><td><span class="">0.896</span></td><td><span class="">0.926</span></td><td><span class="">0.239</span></td><td><span class="">0.295</span></td></tr><tr class=""><th scope="row">EVOKE-Turbo</th><td><span class="">0.784</span></td><td><span class="best">0.718</span></td><td><span class="">1.12</span></td><td><span class="">61.6</span></td><td><span class="">0.961</span></td><td><span class="">0.105</span></td><td><span class="">0.182</span></td><td><span class="">0.249</span></td></tr><tr class=""><th scope="row">Echo-WM</th><td><span class="best">0.791</span></td><td><span class="">0.655</span></td><td><span class="second">2.21</span></td><td><span class="">63.5</span></td><td><span class="">0.968</span></td><td><span class="second">0.0604</span></td><td><span class="">0.135</span></td><td><span class="">0.135</span></td></tr><tr class="group-start"><th scope="row">Seedance 2.0</th><td><span class="">0.717</span></td><td><span class="">0.617</span></td><td><span class="">2.14</span></td><td><span class="second">69.8</span></td><td><span class="second">0.980</span></td><td><span class="">0.101</span></td><td><span class="">0.170</span></td><td><span class="">0.307</span></td></tr><tr class=""><th scope="row">Wan3.0</th><td><span class="second">0.786</span></td><td><span class="">0.702</span></td><td><span class="">1.63</span></td><td><span class="">59.1</span></td><td><span class="">0.938</span></td><td><span class="">0.146</span></td><td><span class="">0.184</span></td><td><span class="second">0.131</span></td></tr><tr class=""><th scope="row">Kling 3.0</th><td><span class="">0.739</span></td><td><span class="">0.588</span></td><td><span class="">2.09</span></td><td><span class="">59.3</span></td><td><span class="">0.978</span></td><td><span class="">0.0745</span></td><td><span class="">0.155</span></td><td><span class="">0.163</span></td></tr><tr class=""><th scope="row">MiniMax-H3 (Base)</th><td><span class="">0.725</span></td><td><span class="">0.617</span></td><td><span class="">0.438</span></td><td><span class="">50.8</span></td><td><span class="">0.979</span></td><td><span class="">0.0633</span></td><td><span class="">0.140</span></td><td><span class="">0.178</span></td></tr><tr class="ours"><th scope="row">WorldWeave</th><td><span class="">0.781</span></td><td><span class="second">0.704</span></td><td><span class="best gain">2.30 (+426.7%)</span></td><td><span class="best gain">72.3 (+42.2%)</span></td><td><span class="best">0.981</span></td><td><span class="best">0.0573</span></td><td><span class="best">0.122</span></td><td><span class="best gain">0.121 (-32.2%)</span></td></tr></tbody></table></div>
+      <p class="table-note">The first six baselines are open-source world models; the remaining baselines are video models. <strong>Bold</strong> and <span class="second">underline</span> indicate best and second-best scores. Highlighted gains are relative to MiniMax-H3 (Base). Evaluation covers 120 tasks, with structural memory measured on the common 48 applicable tasks.</p>
+      <p class="downloads"><a href="data/main_results.csv" download>Download CSV</a><a href="data/main_results.json">View JSON</a></p>
+    </section>
+  </main>
+  <footer><p>WorldWeave · Zhejiang University &amp; Daerwen AI</p><p>Page organization inspired by <a href="https://nerfies.github.io/">Nerfies</a>. No analytics or tracking scripts.</p></footer>
+</body>
+</html>
