@@ -38,11 +38,23 @@
       <h2>Abstract</h2>
       <p>Despite rapid progress, world models still lack explicit, persistent structural memory, making it difficult to preserve consistent world structure during continual scene expansion and cross-view revisits. To address this limitation, we present WorldWeave, a world generation framework that decouples world-state maintenance from visual rendering. Specifically, WorldWeave combines continual elevation-map generation with agent-guided scene organization and stitching to build an expandable explicit 3D world that incrementally extends structural memory while preserving existing structure. First, its terrain module uses diffusion-based image outpainting to generate continuous metric elevation maps under neighborhood conditioning and boundary constraints. Next, an agent integrates user intent, terrain evidence, and cross-region connectivity constraints to construct scenes through hierarchical semantic planning, deterministic geometry compilation, and local revision. Finally, during visual generation, planned camera trajectories query world geometry through a read-only interface, producing depth sequences that guide video synthesis without writing the generated results back into the world state. As a result, structural memory remains independent of short-window video generation, enabling continual expansion without predefined map boundaries and providing a consistent geometric basis for observations across trajectories and repeated visits.</p>
     </section>
-    <section id="video" class="reading">
-      <h2>Video demonstration</h2>
-      <div class="video-slot" role="img" aria-label="Video demonstration coming soon">
-        <span class="video-label">WorldWeave</span>
-        <p>Video demonstration</p><span class="coming">Coming soon</span>
+    <section id="video" class="wide video-gallery">
+      <div class="section-heading"><h2>Video demonstrations</h2><p>Consecutive segments, shown separately without stitching.</p></div>
+      <div class="scene-row">
+        <h3>Snowy mountain</h3>
+        <div class="clip-grid">
+          <figure class="clip-card"><video controls muted playsinline preload="metadata" poster="assets/videos/winter_01.jpg" aria-label="Snowy mountain segment 1"><source src="assets/videos/winter_01.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Segment 1</figcaption></figure>
+          <figure class="clip-card"><video controls muted playsinline preload="metadata" poster="assets/videos/winter_02.jpg" aria-label="Snowy mountain segment 2"><source src="assets/videos/winter_02.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Segment 2</figcaption></figure>
+          <figure class="clip-card"><video controls muted playsinline preload="metadata" poster="assets/videos/winter_03.jpg" aria-label="Snowy mountain segment 3"><source src="assets/videos/winter_03.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Segment 3</figcaption></figure>
+        </div>
+      </div>
+      <div class="scene-row">
+        <h3>Riverbank</h3>
+        <div class="clip-grid">
+          <figure class="clip-card pending"><div class="clip-placeholder" role="img" aria-label="Riverbank segment 1 coming soon"><span>Coming soon</span></div><figcaption>Segment 1</figcaption></figure>
+          <figure class="clip-card pending"><div class="clip-placeholder" role="img" aria-label="Riverbank segment 2 coming soon"><span>Coming soon</span></div><figcaption>Segment 2</figcaption></figure>
+          <figure class="clip-card pending"><div class="clip-placeholder" role="img" aria-label="Riverbank segment 3 coming soon"><span>Coming soon</span></div><figcaption>Segment 3</figcaption></figure>
+        </div>
       </div>
     </section>
     <section class="wide examples">
