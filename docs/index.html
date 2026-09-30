@@ -39,7 +39,7 @@
       <p>Despite rapid progress, world models still lack explicit, persistent structural memory, making it difficult to preserve consistent world structure during continual scene expansion and cross-view revisits. To address this limitation, we present WorldWeave, a world generation framework that decouples world-state maintenance from visual rendering. Specifically, WorldWeave combines continual elevation-map generation with agent-guided scene organization and stitching to build an expandable explicit 3D world that incrementally extends structural memory while preserving existing structure. First, its terrain module uses diffusion-based image outpainting to generate continuous metric elevation maps under neighborhood conditioning and boundary constraints. Next, an agent integrates user intent, terrain evidence, and cross-region connectivity constraints to construct scenes through hierarchical semantic planning, deterministic geometry compilation, and local revision. Finally, during visual generation, planned camera trajectories query world geometry through a read-only interface, producing depth sequences that guide video synthesis without writing the generated results back into the world state. As a result, structural memory remains independent of short-window video generation, enabling continual expansion without predefined map boundaries and providing a consistent geometric basis for observations across trajectories and repeated visits.</p>
     </section>
     <section id="video" class="wide video-gallery">
-      <div class="section-heading"><h2>Video demonstrations</h2><p>Consecutive segments, shown separately without stitching.</p></div>
+      <div class="section-heading"><h2>Video demonstrations</h2><p>Continuous exploration within the same scene.</p></div>
       <div class="scene-row">
         <h3>Snowy mountain</h3>
         <div class="clip-grid">
@@ -77,3 +77,4 @@
   <footer><p>WorldWeave · Zhejiang University &amp; Daerwen AI</p><p>Page organization inspired by <a href="https://nerfies.github.io/">Nerfies</a>. No analytics or tracking scripts.</p></footer>
 </body>
 </html>
+
