@@ -10,9 +10,15 @@
 </head>
 <body>
   <a class="skip" href="#abstract">Skip to content</a>
-  <header class="hero">
+  <nav class="topbar" aria-label="Main navigation"><a class="brand" href="#">W<span>WorldWeave</span></a><div><a href="#video">Explore</a><a href="#method">Method</a><a href="#results">Results</a><a href="https://arxiv.org/abs/2609.34221">Paper ↗</a></div></nav>
+  <header class="hero wide">
+    <div class="hero-copy"><p class="eyebrow">A persistent world, beyond the frame</p>
     <h1><span class="wordmark">WorldWeave</span><span class="subtitle">Growing Persistent Geometric Worlds<br class="desktop-break"> for Video Generation</span></h1>
-    <div class="authors"><span><a href="https://openreview.net/profile?id=~Huang_Yifan1">Yifan Huang</a><sup>1</sup></span>
+    <p class="hero-intro">Build a world that stays.<br>Generate new views from the same geometry.</p>
+    <nav class="resources" aria-label="Project resources"><a class="button primary" href="https://arxiv.org/abs/2609.34221">Read the paper ↗</a><a class="button" href="https://github.com/laiyindagm/WorldWeave">Code <small>coming soon</small></a><a class="text-link" href="#video">Explore the worlds ↓</a></nav>
+    </div><figure class="hero-visual"><img src="assets/videos/river_01.jpg" alt="A persistent riverbank world with a stone bridge and wooded banks." fetchpriority="high"><figcaption><span class="live-dot"></span> Riverbank / a world to return to <a href="#video" aria-label="View riverbank videos">↗</a></figcaption><span class="coordinate" aria-hidden="true">WORLD 02<br>PERSISTENT GEOMETRY</span></figure>
+  </header>
+  <div class="byline wide"><div class="authors"><span><a href="https://openreview.net/profile?id=~Huang_Yifan1">Yifan Huang</a><sup>1</sup></span>
 <span><a href="https://openreview.net/profile?id=~Lifan_Jiang1">Lifan Jiang</a><sup>1</sup></span>
 <span><a href="https://openreview.net/profile?id=~Qingyue_Hao1">Qingyue Hao</a><sup>1</sup></span>
 <span><a href="https://openreview.net/profile?id=~Cheng_Chen78">Cheng Chen</a><sup>1</sup></span>
@@ -22,26 +28,17 @@
 <span><a href="https://openreview.net/profile?id=~Dehai_Zhao2">Dehai Zhao</a><sup>1,†</sup></span></div>
     <p class="affiliations"><span><sup>1</sup> Zhejiang University</span><span><sup>2</sup> Daerwen AI</span></p>
     <p class="corresponding">† Corresponding author</p>
-    <nav class="resources" aria-label="Project resources">
-      <a class="button primary" href="assets/worldweave.pdf">Read the paper <span aria-hidden="true">↗</span></a>
-      
-      <a class="button" href="https://github.com/laiyindagm/WorldWeave">Code <small>coming soon</small></a>
-      <a class="button" href="#video">Video</a>
-    </nav>
-  </header>
+  </div>
   <main>
-    <figure class="teaser wide">
+    <section id="abstract" class="wide concept"><div><p class="eyebrow">01 / The idea</p><h2>Video changes.<br>The world remembers.</h2></div><div><p class="lead">WorldWeave gives video generation an explicit, persistent geometric world: terrain that can grow, scenes that can be planned, and structure that can be revisited.</p><details><summary>Read the full abstract</summary><p>Despite rapid progress, world models still lack explicit, persistent structural memory, making it difficult to preserve consistent world structure during continual scene expansion and cross-view revisits. To address this limitation, we present WorldWeave, a world generation framework that decouples world-state maintenance from visual rendering. Specifically, WorldWeave combines continual elevation-map generation with agent-guided scene organization and stitching to build an expandable explicit 3D world that incrementally extends structural memory while preserving existing structure. First, its terrain module uses diffusion-based image outpainting to generate continuous metric elevation maps under neighborhood conditioning and boundary constraints. Next, an agent integrates user intent, terrain evidence, and cross-region connectivity constraints to construct scenes through hierarchical semantic planning, deterministic geometry compilation, and local revision. Finally, during visual generation, planned camera trajectories query world geometry through a read-only interface, producing depth sequences that guide video synthesis without writing the generated results back into the world state. As a result, structural memory remains independent of short-window video generation, enabling continual expansion without predefined map boundaries and providing a consistent geometric basis for observations across trajectories and repeated visits.</p></details></div></section>
+    <figure class="teaser wide diagram">
       <a href="assets/worldweave_overview.pdf" aria-label="Open the full-resolution WorldWeave overview PDF"><img src="assets/worldweave_overview.svg" alt="WorldWeave overview: terrain completion, hierarchical agent planning, and read-only rendering progressively extend a persistent geometric world." fetchpriority="high"></a>
       <figcaption>Grow the world. Preserve its structure. Render new observations.</figcaption>
     </figure>
-    <section id="abstract" class="reading">
-      <h2>Abstract</h2>
-      <p>Despite rapid progress, world models still lack explicit, persistent structural memory, making it difficult to preserve consistent world structure during continual scene expansion and cross-view revisits. To address this limitation, we present WorldWeave, a world generation framework that decouples world-state maintenance from visual rendering. Specifically, WorldWeave combines continual elevation-map generation with agent-guided scene organization and stitching to build an expandable explicit 3D world that incrementally extends structural memory while preserving existing structure. First, its terrain module uses diffusion-based image outpainting to generate continuous metric elevation maps under neighborhood conditioning and boundary constraints. Next, an agent integrates user intent, terrain evidence, and cross-region connectivity constraints to construct scenes through hierarchical semantic planning, deterministic geometry compilation, and local revision. Finally, during visual generation, planned camera trajectories query world geometry through a read-only interface, producing depth sequences that guide video synthesis without writing the generated results back into the world state. As a result, structural memory remains independent of short-window video generation, enabling continual expansion without predefined map boundaries and providing a consistent geometric basis for observations across trajectories and repeated visits.</p>
-    </section>
     <section id="video" class="wide video-gallery">
-      <div class="section-heading"><h2>Video demonstrations</h2><p>Continuous exploration within the same scene.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">02 / Explore the worlds</p><h2>Keep moving.<br>Stay in the same world.</h2></div><p>Continuous exploration within the same scene.</p></div>
       <div class="scene-row">
-        <h3>Snowy mountain</h3>
+        <h3><span class="scene-number">01</span> Snowy mountain <span class="scene-description">Snow-covered terrain &amp; changing viewpoints</span></h3>
         <div class="clip-grid">
           <figure class="clip-card"><video controls muted playsinline preload="metadata" poster="assets/videos/winter_01.jpg" aria-label="Snowy mountain segment 1"><source src="assets/videos/winter_01.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Segment 1</figcaption></figure>
           <figure class="clip-card"><video controls muted playsinline preload="metadata" poster="assets/videos/winter_02.jpg" aria-label="Snowy mountain segment 2"><source src="assets/videos/winter_02.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Segment 2</figcaption></figure>
@@ -49,7 +46,7 @@
         </div>
       </div>
       <div class="scene-row">
-        <h3>Riverbank</h3>
+        <h3><span class="scene-number">02</span> Riverbank <span class="scene-description">From the river path to the stone bridge</span></h3>
         <div class="clip-grid">
           <figure class="clip-card"><video controls muted playsinline preload="metadata" poster="assets/videos/river_01.jpg" aria-label="Riverbank segment 1"><source src="assets/videos/river_01.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Segment 1</figcaption></figure>
           <figure class="clip-card"><video controls muted playsinline preload="metadata" poster="assets/videos/river_02.jpg" aria-label="Riverbank segment 2"><source src="assets/videos/river_02.mp4" type="video/mp4">Your browser does not support video playback.</video><figcaption>Segment 2</figcaption></figure>
@@ -63,18 +60,28 @@
         <figcaption>Each row follows a viewing trajectory from left to right. Insets show depth guidance; numbered markers identify the same scene elements across views.</figcaption>
       </figure>
     </section>
-    <section class="wide method">
-      <div class="section-heading"><h2>From persistent world to video</h2><p>Terrain completion · Agent planning · Read-only rendering</p></div>
+    <section class="wide method" id="method">
+      <div class="section-heading"><div><p class="eyebrow">03 / How it works</p><h2>Geometry first.<br>Observations follow.</h2></div><p>A persistent spatial state, separate from generated appearance.</p></div>
+      <div class="principles"><article><span>01</span><h3>Grow the terrain</h3><p>Extend metric terrain while matching boundary heights and slopes.</p></article><article><span>02</span><h3>Construct the scene</h3><p>Use hierarchical agent planning and geometric checks to organize the world.</p></article><article><span>03</span><h3>Render new views</h3><p>Read depth from the scene to guide video. Generated RGB never writes back into the geometry.</p></article></div>
       <figure><a href="assets/pipeline.pdf"><img src="assets/pipeline.svg" alt="The WorldWeave pipeline connects metric terrain generation, hierarchical scene planning and validation, and depth-guided video synthesis." loading="lazy"></a></figure>
     </section>
     <section class="results wide" id="results">
-      <div class="section-heading"><h2>Quantitative results</h2><p>Visual quality, memory, camera control and structural consistency.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">04 / Evaluation</p><h2>Measured beyond<br>a single view.</h2></div><p>Visual quality, memory, camera control and structural consistency.</p></div>
+      <div class="metrics"><div><strong>120</strong><span>video evaluation tasks</span></div><div><strong>72.3</strong><span>camera compliance · base 50.8</span></div><div><strong>2.30</strong><span>structural memory · base 0.438<small>Common subset of 48 tasks</small></span></div></div>
       <div class="table-scroll" role="region" aria-label="Quantitative results; scroll horizontally on small screens" tabindex="0"><table><caption>Main quantitative results</caption><thead><tr><th rowspan="2" scope="col">Method</th><th colspan="2" scope="colgroup">Visual quality</th><th colspan="2" scope="colgroup">Memory &amp; camera control</th><th colspan="4" scope="colgroup">Structural consistency</th></tr><tr><th scope="col">Imaging<br>quality ↑</th><th scope="col">Aesthetic<br>quality ↑</th><th scope="col">Structural<br>memory ↑</th><th scope="col">Camera<br>compliance ↑</th><th scope="col">MN-MS ↑</th><th scope="col">MC-GeCo ↓</th><th scope="col">MC-MEt3R ↓</th><th scope="col">MC-GeoCon ↓</th></tr></thead><tbody><tr class=""><th scope="row">SANA-WM</th><td><span class="">0.739</span></td><td><span class="">0.619</span></td><td><span class="">0.328</span></td><td><span class="">55.5</span></td><td><span class="">0.973</span></td><td><span class="">0.113</span></td><td><span class="">0.203</span></td><td><span class="">0.189</span></td></tr><tr class=""><th scope="row">Zing</th><td><span class="">0.763</span></td><td><span class="">0.685</span></td><td><span class="">0.989</span></td><td><span class="">55.8</span></td><td><span class="">0.974</span></td><td><span class="">0.0698</span></td><td><span class="second">0.129</span></td><td><span class="">0.142</span></td></tr><tr class=""><th scope="row">SolarWM-5B</th><td><span class="">0.755</span></td><td><span class="">0.604</span></td><td><span class="">0.370</span></td><td><span class="">54.7</span></td><td><span class="">0.956</span></td><td><span class="">0.0786</span></td><td><span class="">0.166</span></td><td><span class="">0.217</span></td></tr><tr class=""><th scope="row">AlayaWorld</th><td><span class="">0.784</span></td><td><span class="">0.641</span></td><td><span class="">1.51</span></td><td><span class="">56.4</span></td><td><span class="">0.896</span></td><td><span class="">0.926</span></td><td><span class="">0.239</span></td><td><span class="">0.295</span></td></tr><tr class=""><th scope="row">EVOKE-Turbo</th><td><span class="">0.784</span></td><td><span class="best">0.718</span></td><td><span class="">1.12</span></td><td><span class="">61.6</span></td><td><span class="">0.961</span></td><td><span class="">0.105</span></td><td><span class="">0.182</span></td><td><span class="">0.249</span></td></tr><tr class=""><th scope="row">Echo-WM</th><td><span class="best">0.791</span></td><td><span class="">0.655</span></td><td><span class="second">2.21</span></td><td><span class="">63.5</span></td><td><span class="">0.968</span></td><td><span class="second">0.0604</span></td><td><span class="">0.135</span></td><td><span class="">0.135</span></td></tr><tr class="group-start"><th scope="row">Seedance 2.0</th><td><span class="">0.717</span></td><td><span class="">0.617</span></td><td><span class="">2.14</span></td><td><span class="second">69.8</span></td><td><span class="second">0.980</span></td><td><span class="">0.101</span></td><td><span class="">0.170</span></td><td><span class="">0.307</span></td></tr><tr class=""><th scope="row">Wan3.0</th><td><span class="second">0.786</span></td><td><span class="">0.702</span></td><td><span class="">1.63</span></td><td><span class="">59.1</span></td><td><span class="">0.938</span></td><td><span class="">0.146</span></td><td><span class="">0.184</span></td><td><span class="second">0.131</span></td></tr><tr class=""><th scope="row">Kling 3.0</th><td><span class="">0.739</span></td><td><span class="">0.588</span></td><td><span class="">2.09</span></td><td><span class="">59.3</span></td><td><span class="">0.978</span></td><td><span class="">0.0745</span></td><td><span class="">0.155</span></td><td><span class="">0.163</span></td></tr><tr class=""><th scope="row">MiniMax-H3 (Base)</th><td><span class="">0.725</span></td><td><span class="">0.617</span></td><td><span class="">0.438</span></td><td><span class="">50.8</span></td><td><span class="">0.979</span></td><td><span class="">0.0633</span></td><td><span class="">0.140</span></td><td><span class="">0.178</span></td></tr><tr class="ours"><th scope="row">WorldWeave</th><td><span class="">0.781</span></td><td><span class="second">0.704</span></td><td><span class="best gain">2.30 (+426.7%)</span></td><td><span class="best gain">72.3 (+42.2%)</span></td><td><span class="best">0.981</span></td><td><span class="best">0.0573</span></td><td><span class="best">0.122</span></td><td><span class="best gain">0.121 (-32.2%)</span></td></tr></tbody></table></div>
       <p class="table-note">The first six baselines are open-source world models; the remaining baselines are video models. <strong>Bold</strong> and <span class="second">underline</span> indicate best and second-best scores. Highlighted gains are relative to MiniMax-H3 (Base). Evaluation covers 120 tasks, with structural memory measured on the common 48 applicable tasks.</p>
       <p class="downloads"><a href="data/main_results.csv" download>Download CSV</a><a href="data/main_results.json">View JSON</a></p>
     </section>
+    <section class="wide citation" id="citation"><div><p class="eyebrow">Build on this work</p><h2>Citation</h2><a href="https://arxiv.org/abs/2609.34221">arXiv:2609.34221 ↗</a></div><pre><code>@article{huang2026worldweave,
+  title={WorldWeave: Growing Persistent Geometric Worlds
+         for Video Generation},
+  author={Huang, Yifan and Jiang, Lifan and Hao, Qingyue
+          and Chen, Cheng and Wu, Boxi and Ren, Xiaoxue
+          and He, Xiaofei and Zhao, Dehai},
+  journal={arXiv preprint arXiv:2609.34221},
+  year={2026}
+}</code></pre></section>
   </main>
-  <footer><p>WorldWeave · Zhejiang University &amp; Daerwen AI</p><p>Page organization inspired by <a href="https://nerfies.github.io/">Nerfies</a>. No analytics or tracking scripts.</p></footer>
+  <footer class="wide"><a class="brand" href="#">W<span>WorldWeave</span></a><p>Zhejiang University &amp; Daerwen AI<br><span>Persistent geometry. New observations.</span></p><a href="https://arxiv.org/abs/2609.34221">Read the paper ↗</a></footer>
 </body>
 </html>
-

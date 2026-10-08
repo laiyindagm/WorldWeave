@@ -6,7 +6,7 @@ Yifan Huang¹, Lifan Jiang¹, Qingyue Hao¹, Cheng Chen¹, Boxi Wu², Xiaoxue Re
 
 † Corresponding author.
 
-[Paper](docs/assets/worldweave.pdf) · [Project page](https://laiyindagm.github.io/WorldWeave/)
+[Paper](https://arxiv.org/abs/2609.34221) · [Project page](https://laiyindagm.github.io/WorldWeave/) · [arXiv](https://arxiv.org/abs/2609.34221)
 
 **Code coming soon.** This repository currently hosts paper figures, quantitative results and the project page. The implementation and model release will follow.
 
@@ -50,6 +50,6 @@ The first six baselines are open-source world models; the next four are video mo
 
 - Paper and visual results: available here.
 - Implementation and models: **coming soon**.
-- Video demonstration: **coming soon**.
+- Video demonstrations: [six continuous-exploration clips on the project page](https://laiyindagm.github.io/WorldWeave/#video).
 
 The repository contains no third-party model weights, game assets, or individual user-study records. Third-party materials remain subject to their respective rights.
