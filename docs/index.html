@@ -10,7 +10,7 @@
 </head>
 <body>
   <a class="skip" href="#abstract">Skip to content</a>
-  <nav class="topbar" aria-label="Main navigation"><a class="brand" href="#">W<span>WorldWeave</span></a><div><a href="#video">Explore</a><a href="#method">Method</a><a href="#results">Results</a><a href="https://arxiv.org/abs/2609.34221">Paper ↗</a></div></nav>
+  <nav class="topbar" aria-label="Main navigation"><a class="brand" href="#">W<span>WorldWeave</span></a><div><a href="#video">Explore</a><a href="#method">Method</a><a href="#results">Results</a><a href="#comparison">Compare</a><a href="https://arxiv.org/abs/2609.34221">Paper ↗</a></div></nav>
   <header class="hero wide">
     <div class="hero-copy"><p class="eyebrow">A persistent world, beyond the frame</p>
     <h1><span class="wordmark">WorldWeave</span><span class="subtitle">Growing Persistent Geometric Worlds<br class="desktop-break"> for Video Generation</span></h1>
@@ -54,6 +54,18 @@
         </div>
       </div>
     </section>
+    <section class="wide comparison" id="comparison" aria-labelledby="comparison-title">
+      <div class="section-heading"><div><p class="eyebrow">Compare the methods</p><h2 id="comparison-title">One task.<br>Different ways to see it.</h2></div><p>Select a first frame to compare the same task across eleven methods.</p></div>
+      <div id="case-choices" class="case-choices" role="tablist" aria-label="Comparison scenes"></div>
+      <div id="comparison-panel" role="tabpanel" tabindex="0">
+        <div class="comparison-caption"><h3 id="case-title">Loading comparison scenes…</h3><span id="case-id"></span></div>
+        <details class="prompt-details" open><summary>Task prompt</summary><p id="case-prompt"></p></details>
+        <p class="comparison-note">The first frame is the task reference, not an input shared by every model. Conditioning differs by method; text-only baselines receive the prompt. These are the existing evaluation clips, including the benchmark's original temporal normalization. Web encoding adds no timing changes.</p>
+        <div class="comparison-controls"><button id="play-all" type="button">Play all</button><button id="pause-all" type="button">Pause all</button><button id="restart-all" type="button">Restart</button><span id="comparison-status" role="status" aria-live="polite"></span><div class="row-navigation"><button id="previous-methods" type="button" aria-label="Previous methods">←</button><button id="next-methods" type="button" aria-label="Next methods">→</button></div></div>
+        <div id="method-videos" class="method-videos" role="region" aria-label="Method comparison videos; scroll horizontally for all methods" tabindex="0"></div>
+      </div>
+      <noscript><p>Enable JavaScript to switch comparison scenes. <a href="assets/comparison/cases.json">View the case and video manifest.</a></p></noscript>
+    </section>
     <section class="wide examples">
       <div class="section-heading"><h2>Explore. Turn away. Revisit.</h2><p>Shared geometry across changing observations.</p></div>
       <figure><a href="assets/demo_main.pdf"><img src="assets/demo_main.svg" alt="Four video sequences show farmstead, river crossing, town and winter scenes remaining coherent during camera motion and revisitation." loading="lazy"></a>
@@ -83,5 +95,6 @@
 }</code></pre></section>
   </main>
   <footer class="wide"><a class="brand" href="#">W<span>WorldWeave</span></a><p>Zhejiang University &amp; Daerwen AI<br><span>Persistent geometry. New observations.</span></p><a href="https://arxiv.org/abs/2609.34221">Read the paper ↗</a></footer>
+  <script src="assets/comparison.js" defer></script>
 </body>
 </html>

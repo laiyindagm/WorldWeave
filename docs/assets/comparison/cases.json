@@ -1,0 +1,348 @@
+{
+  "cases": [
+    {
+      "id": "new-037",
+      "title": "Farmstead",
+      "summary": "A farmhouse, hidden and found again",
+      "prompt": "A continuous photorealistic walk through a rural farm courtyard in stable spring daylight. First observe the raised timber farmhouse in the center, the roofed circular well in front of it and the low barn on its right. Walk around the outside of the near timber granary on the left. Its solid wall must completely hide the farmhouse briefly; after passing around it, observe the same farmhouse again from the changed position. Preserve the farmhouse roof, porch, steps, well and barn identities and their fixed spatial relationships. One location and one continuous camera move.",
+      "firstFrame": "assets/comparison/new-037--first.jpg",
+      "videos": [
+        {
+          "method": "h3",
+          "label": "WorldWeave",
+          "conditioning": "First frame + depth + prompt",
+          "src": "assets/comparison/new-037--h3.mp4",
+          "poster": "assets/comparison/new-037--h3.jpg"
+        },
+        {
+          "method": "sana",
+          "label": "SANA-WM",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-037--sana.mp4",
+          "poster": "assets/comparison/new-037--sana.jpg"
+        },
+        {
+          "method": "zing",
+          "label": "Zing",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-037--zing.mp4",
+          "poster": "assets/comparison/new-037--zing.jpg"
+        },
+        {
+          "method": "solarwm_5b",
+          "label": "SolarWM-5B",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-037--solarwm_5b.mp4",
+          "poster": "assets/comparison/new-037--solarwm_5b.jpg"
+        },
+        {
+          "method": "alayaworld_v1_1",
+          "label": "AlayaWorld",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-037--alayaworld_v1_1.mp4",
+          "poster": "assets/comparison/new-037--alayaworld_v1_1.jpg"
+        },
+        {
+          "method": "alaya_evoke_turbo",
+          "label": "EVOKE-Turbo",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-037--alaya_evoke_turbo.mp4",
+          "poster": "assets/comparison/new-037--alaya_evoke_turbo.jpg"
+        },
+        {
+          "method": "joyai_echo_1_5_wm",
+          "label": "Echo-WM",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-037--joyai_echo_1_5_wm.mp4",
+          "poster": "assets/comparison/new-037--joyai_echo_1_5_wm.jpg"
+        },
+        {
+          "method": "seedance",
+          "label": "Seedance 2.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-037--seedance.mp4",
+          "poster": "assets/comparison/new-037--seedance.jpg"
+        },
+        {
+          "method": "wan3_0",
+          "label": "Wan3.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-037--wan3_0.mp4",
+          "poster": "assets/comparison/new-037--wan3_0.jpg"
+        },
+        {
+          "method": "kling_3_0",
+          "label": "Kling 3.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-037--kling_3_0.mp4",
+          "poster": "assets/comparison/new-037--kling_3_0.jpg"
+        },
+        {
+          "method": "h3_base",
+          "label": "MiniMax-H3 (Base)",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-037--h3_base.mp4",
+          "poster": "assets/comparison/new-037--h3_base.jpg"
+        }
+      ]
+    },
+    {
+      "id": "new-038",
+      "title": "Autumn town",
+      "summary": "Around the warehouse, back to the workshop",
+      "prompt": "A continuous photorealistic walking shot in stable early-autumn daylight. First clearly observe the timber carriage workshop with its roof cupola and separate tall rectangular brick chimney, together with the crates on its left and the low loading barn on its right. Walk continuously around the solid foreground warehouse on the left, keeping attention on the same subject. The solid occluder must briefly hide the entire subject; then reveal the same subject again from the changed position after passing the occluder. Preserve the subject's geometry, appearance and fixed neighbor arrangement throughout. One location, no scene cut.",
+      "firstFrame": "assets/comparison/new-038--first.jpg",
+      "videos": [
+        {
+          "method": "h3",
+          "label": "WorldWeave",
+          "conditioning": "First frame + depth + prompt",
+          "src": "assets/comparison/new-038--h3.mp4",
+          "poster": "assets/comparison/new-038--h3.jpg"
+        },
+        {
+          "method": "sana",
+          "label": "SANA-WM",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-038--sana.mp4",
+          "poster": "assets/comparison/new-038--sana.jpg"
+        },
+        {
+          "method": "zing",
+          "label": "Zing",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-038--zing.mp4",
+          "poster": "assets/comparison/new-038--zing.jpg"
+        },
+        {
+          "method": "solarwm_5b",
+          "label": "SolarWM-5B",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-038--solarwm_5b.mp4",
+          "poster": "assets/comparison/new-038--solarwm_5b.jpg"
+        },
+        {
+          "method": "alayaworld_v1_1",
+          "label": "AlayaWorld",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-038--alayaworld_v1_1.mp4",
+          "poster": "assets/comparison/new-038--alayaworld_v1_1.jpg"
+        },
+        {
+          "method": "alaya_evoke_turbo",
+          "label": "EVOKE-Turbo",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-038--alaya_evoke_turbo.mp4",
+          "poster": "assets/comparison/new-038--alaya_evoke_turbo.jpg"
+        },
+        {
+          "method": "joyai_echo_1_5_wm",
+          "label": "Echo-WM",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-038--joyai_echo_1_5_wm.mp4",
+          "poster": "assets/comparison/new-038--joyai_echo_1_5_wm.jpg"
+        },
+        {
+          "method": "seedance",
+          "label": "Seedance 2.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-038--seedance.mp4",
+          "poster": "assets/comparison/new-038--seedance.jpg"
+        },
+        {
+          "method": "wan3_0",
+          "label": "Wan3.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-038--wan3_0.mp4",
+          "poster": "assets/comparison/new-038--wan3_0.jpg"
+        },
+        {
+          "method": "kling_3_0",
+          "label": "Kling 3.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-038--kling_3_0.mp4",
+          "poster": "assets/comparison/new-038--kling_3_0.jpg"
+        },
+        {
+          "method": "h3_base",
+          "label": "MiniMax-H3 (Base)",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-038--h3_base.mp4",
+          "poster": "assets/comparison/new-038--h3_base.jpg"
+        }
+      ]
+    },
+    {
+      "id": "new-039",
+      "title": "Winter cabin",
+      "summary": "A snowy boulder and a returning landmark",
+      "prompt": "A continuous photorealistic walking shot in soft winter daylight. First clearly observe the gabled stone-and-timber cabin with its tall left-side stone chimney and right porch, together with the short timber bridge on its left and the woodpile beside the cabin. Walk continuously around the large snow-covered foreground boulder on the right, keeping attention on the same subject. The solid occluder must briefly hide the entire subject; then reveal the same subject again from the changed position after passing the occluder. Preserve the subject's geometry, appearance and fixed neighbor arrangement throughout. One location, no scene cut.",
+      "firstFrame": "assets/comparison/new-039--first.jpg",
+      "videos": [
+        {
+          "method": "h3",
+          "label": "WorldWeave",
+          "conditioning": "First frame + depth + prompt",
+          "src": "assets/comparison/new-039--h3.mp4",
+          "poster": "assets/comparison/new-039--h3.jpg"
+        },
+        {
+          "method": "sana",
+          "label": "SANA-WM",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-039--sana.mp4",
+          "poster": "assets/comparison/new-039--sana.jpg"
+        },
+        {
+          "method": "zing",
+          "label": "Zing",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-039--zing.mp4",
+          "poster": "assets/comparison/new-039--zing.jpg"
+        },
+        {
+          "method": "solarwm_5b",
+          "label": "SolarWM-5B",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-039--solarwm_5b.mp4",
+          "poster": "assets/comparison/new-039--solarwm_5b.jpg"
+        },
+        {
+          "method": "alayaworld_v1_1",
+          "label": "AlayaWorld",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-039--alayaworld_v1_1.mp4",
+          "poster": "assets/comparison/new-039--alayaworld_v1_1.jpg"
+        },
+        {
+          "method": "alaya_evoke_turbo",
+          "label": "EVOKE-Turbo",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-039--alaya_evoke_turbo.mp4",
+          "poster": "assets/comparison/new-039--alaya_evoke_turbo.jpg"
+        },
+        {
+          "method": "joyai_echo_1_5_wm",
+          "label": "Echo-WM",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-039--joyai_echo_1_5_wm.mp4",
+          "poster": "assets/comparison/new-039--joyai_echo_1_5_wm.jpg"
+        },
+        {
+          "method": "seedance",
+          "label": "Seedance 2.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-039--seedance.mp4",
+          "poster": "assets/comparison/new-039--seedance.jpg"
+        },
+        {
+          "method": "wan3_0",
+          "label": "Wan3.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-039--wan3_0.mp4",
+          "poster": "assets/comparison/new-039--wan3_0.jpg"
+        },
+        {
+          "method": "kling_3_0",
+          "label": "Kling 3.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-039--kling_3_0.mp4",
+          "poster": "assets/comparison/new-039--kling_3_0.jpg"
+        },
+        {
+          "method": "h3_base",
+          "label": "MiniMax-H3 (Base)",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-039--h3_base.mp4",
+          "poster": "assets/comparison/new-039--h3_base.jpg"
+        }
+      ]
+    },
+    {
+      "id": "new-040",
+      "title": "Summer pavilion",
+      "summary": "A granite outcrop reveals the same pavilion",
+      "prompt": "A continuous photorealistic walking shot in natural summer daylight. First clearly observe the open gabled timber pavilion on its low stone platform with the visible rail and side steps, together with the low bench on its left and the supply hut behind its right. Walk continuously around the broad foreground granite outcrop on the left, keeping attention on the same subject. The solid occluder must briefly hide the entire subject; then reveal the same subject again from the changed position after passing the occluder. Preserve the subject's geometry, appearance and fixed neighbor arrangement throughout. One location, no scene cut.",
+      "firstFrame": "assets/comparison/new-040--first.jpg",
+      "videos": [
+        {
+          "method": "h3",
+          "label": "WorldWeave",
+          "conditioning": "First frame + depth + prompt",
+          "src": "assets/comparison/new-040--h3.mp4",
+          "poster": "assets/comparison/new-040--h3.jpg"
+        },
+        {
+          "method": "sana",
+          "label": "SANA-WM",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-040--sana.mp4",
+          "poster": "assets/comparison/new-040--sana.jpg"
+        },
+        {
+          "method": "zing",
+          "label": "Zing",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-040--zing.mp4",
+          "poster": "assets/comparison/new-040--zing.jpg"
+        },
+        {
+          "method": "solarwm_5b",
+          "label": "SolarWM-5B",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-040--solarwm_5b.mp4",
+          "poster": "assets/comparison/new-040--solarwm_5b.jpg"
+        },
+        {
+          "method": "alayaworld_v1_1",
+          "label": "AlayaWorld",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-040--alayaworld_v1_1.mp4",
+          "poster": "assets/comparison/new-040--alayaworld_v1_1.jpg"
+        },
+        {
+          "method": "alaya_evoke_turbo",
+          "label": "EVOKE-Turbo",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-040--alaya_evoke_turbo.mp4",
+          "poster": "assets/comparison/new-040--alaya_evoke_turbo.jpg"
+        },
+        {
+          "method": "joyai_echo_1_5_wm",
+          "label": "Echo-WM",
+          "conditioning": "First frame + camera + prompt",
+          "src": "assets/comparison/new-040--joyai_echo_1_5_wm.mp4",
+          "poster": "assets/comparison/new-040--joyai_echo_1_5_wm.jpg"
+        },
+        {
+          "method": "seedance",
+          "label": "Seedance 2.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-040--seedance.mp4",
+          "poster": "assets/comparison/new-040--seedance.jpg"
+        },
+        {
+          "method": "wan3_0",
+          "label": "Wan3.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-040--wan3_0.mp4",
+          "poster": "assets/comparison/new-040--wan3_0.jpg"
+        },
+        {
+          "method": "kling_3_0",
+          "label": "Kling 3.0",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-040--kling_3_0.mp4",
+          "poster": "assets/comparison/new-040--kling_3_0.jpg"
+        },
+        {
+          "method": "h3_base",
+          "label": "MiniMax-H3 (Base)",
+          "conditioning": "Text prompt",
+          "src": "assets/comparison/new-040--h3_base.mp4",
+          "poster": "assets/comparison/new-040--h3_base.jpg"
+        }
+      ]
+    }
+  ]
+}

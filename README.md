@@ -51,5 +51,6 @@ The first six baselines are open-source world models; the next four are video mo
 - Paper and visual results: available here.
 - Implementation and models: **coming soon**.
 - Video demonstrations: [six continuous-exploration clips on the project page](https://laiyindagm.github.io/WorldWeave/#video).
+- [Interactive method comparisons](https://laiyindagm.github.io/WorldWeave/#comparison): four first-frame/prompt cases, eleven methods each. Existing 15-second evaluation clips; web encoding preserves their timing. Input conditioning differs by method.
 
 The repository contains no third-party model weights, game assets, or individual user-study records. Third-party materials remain subject to their respective rights.
